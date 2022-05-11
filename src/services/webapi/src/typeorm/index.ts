@@ -7,6 +7,6 @@ export { SessionEntity };
 export { Post };
 export { Address };
 
-const entities = [User, SessionEntity, Post, Address];
+const entities = [User, SessionEntity, Address, Post];
 
 export default entities;
