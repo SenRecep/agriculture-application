@@ -1,12 +1,11 @@
 import { User } from './User.entity';
 import { SessionEntity } from './Session.entity';
-import { Post } from './Post.entity';
-import { Address } from './Address.entity';
+import { Plant } from './Plant.entity';
+
 export { User };
 export { SessionEntity };
-export { Post };
-export { Address };
+export { Plant };
 
-const entities = [User, SessionEntity, Address, Post];
+const entities = [User, SessionEntity, Plant];
 
 export default entities;

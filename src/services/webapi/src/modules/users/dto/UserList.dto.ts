@@ -5,6 +5,7 @@ export class UserListDto extends EntityBaseDto<UserListDto> {
   firstName: string;
   lastName: string;
   email: string;
+  isAdmin: boolean;
   @Exclude()
   password: string;
 }

@@ -18,30 +18,30 @@ import {
 import { Request } from 'express';
 import { HttpExceptionFilter } from 'src/filters/HttpException.filter';
 import { UserListDto } from 'src/modules/users/dto/UserList.dto';
-import { PostCreateDto } from '../../dto/PostCreate.dto';
-import { PostUpdateDto } from '../../dto/PostUpdate.dto';
-import { PostsService } from '../../services/posts/posts.service';
+import { PlantCreateDto } from '../../dto/PlantCreate.dto';
+import { PlantUpdateDto } from '../../dto/PlantUpdate.dto';
+import { PlantsService } from '../../services/plants/plants.service';
 
-@Controller('posts')
-export class PostsController {
+@Controller('plants')
+export class PlantsController {
   constructor(
-    @Inject(PostsService) private readonly postsService: PostsService,
+    @Inject(PlantsService) private readonly plantsService: PlantsService,
   ) {}
 
   @Get()
   getAll() {
-    return this.postsService.getAllWhitoutDeleted();
+    return this.plantsService.getAllWhitoutDeleted();
   }
   @Get('pager')
   async getAllPager(@Query() { take, skip }) {
-    return await this.postsService.getAllPager(take, skip);
+    return await this.plantsService.getAllPager(take, skip);
   }
-  @Get('/checkowner/:postId')
+  @Get('/checkowner/:plantId')
   async checkOwner(
-    @Param('postId', ParseIntPipe) postId: number,
+    @Param('plantId', ParseIntPipe) plantId: number,
     @Req() req: Request,
   ) {
-    const found = await this.postsService.getByIdAsync(postId);
+    const found = await this.plantsService.getByIdAsync(plantId);
     const user = new UserListDto(req.user);
     return found?.userId === user.id;
   }
@@ -49,27 +49,27 @@ export class PostsController {
   @Get(':id')
   @UseFilters(HttpExceptionFilter)
   async getById(@Param('id', ParseIntPipe) id: number) {
-    const found = await this.postsService.getByIdAsync(id);
+    const found = await this.plantsService.getByIdAsync(id);
     if (!found) throw new NotFoundException('Post not found');
     return found;
   }
 
   @Delete(':id')
   delete(@Param('id', ParseIntPipe) id: number) {
-    return this.postsService.deleteAsync(id);
+    return this.plantsService.deleteAsync(id);
   }
   @Put(':id')
   update(
     @Param('id', ParseIntPipe) id: number,
-    @Body() postUpdateDto: PostUpdateDto,
+    @Body() plantUpdateDto: PlantUpdateDto,
   ) {
-    return this.postsService.updateAsync(id, postUpdateDto);
+    return this.plantsService.updateAsync(id, plantUpdateDto);
   }
 
   @Post()
   @UsePipes(ValidationPipe)
-  createUser(@Body() postCreateDto: PostCreateDto, @Req() req: Request) {
-    postCreateDto.userId = req.user['id'];
-    return this.postsService.createAsync(postCreateDto);
+  createUser(@Body() plantCreateDto: PlantCreateDto, @Req() req: Request) {
+    plantCreateDto.userId = req.user['id'];
+    return this.plantsService.createAsync(plantCreateDto);
   }
 }

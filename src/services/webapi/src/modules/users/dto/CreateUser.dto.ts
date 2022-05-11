@@ -7,7 +7,6 @@ import {
   Validate,
 } from 'class-validator';
 import { PasswordValidation } from 'class-validator-password-check';
-import { IsAcademicEmail } from 'src/extensions/CustomValidation/IsAcademicEmailValidator';
 import { PasswordRequirement } from 'src/utils/passwordRequirement';
 
 export class CreateUserDto {
@@ -28,6 +27,5 @@ export class CreateUserDto {
   @IsNotEmpty()
   @IsString()
   @IsEmail()
-  @Validate(IsAcademicEmail)
   email: string;
 }

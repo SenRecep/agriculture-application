@@ -12,4 +12,6 @@ export class User extends EntityBase {
   email: string;
   @Column({ name: 'password', nullable: false, default: '' })
   password: string;
+  @Column({ name: 'is_admin', nullable: false, default: false })
+  isAdmin: boolean;
 }
