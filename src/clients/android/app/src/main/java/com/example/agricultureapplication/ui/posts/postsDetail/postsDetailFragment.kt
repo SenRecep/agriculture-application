@@ -1,4 +1,4 @@
-package com.example.student_community.ui.posts.postsDetail
+package com.example.agricultureapplication.ui.posts.postsDetail
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -9,9 +9,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
-import com.example.student_community.MainActivity
-import com.example.student_community.R
-import com.example.student_community.utility.GlobalApp
+import com.example.agricultureapplication.MainActivity
+import com.example.agricultureapplication.R
 import kotlinx.android.synthetic.main.posts_detail_fragment.*
 import kotlinx.android.synthetic.main.posts_detail_fragment.view.*
 

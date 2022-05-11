@@ -1,7 +1,7 @@
-package com.example.student_community.utility
+package com.example.agricultureapplication.utility
 
 import androidx.lifecycle.MutableLiveData
-import com.example.student_community.models.api.ApiError
+import com.example.agricultureapplication.models.api.ApiError
 
 interface IViewModelState {
     var loadingState: MutableLiveData<LoadingState>

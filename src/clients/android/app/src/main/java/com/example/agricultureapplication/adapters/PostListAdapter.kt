@@ -1,14 +1,13 @@
-package com.example.student_community.adapters
+package com.example.agricultureapplication.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.student_community.R
-import com.example.student_community.models.webapi.Address
-import com.example.student_community.models.webapi.Post
-import com.example.student_community.models.webapi.dto.PostListDto
-import com.example.student_community.ui.holders.LoadingHolder
-import com.example.student_community.ui.holders.PostHolder
+import com.example.agricultureapplication.R
+import com.example.agricultureapplication.models.webapi.Post
+import com.example.agricultureapplication.models.webapi.dto.PostListDto
+import com.example.agricultureapplication.ui.holders.LoadingHolder
+import com.example.agricultureapplication.ui.holders.PostHolder
 
 class PostListAdapter(
     var posts: ArrayList<PostListDto>,

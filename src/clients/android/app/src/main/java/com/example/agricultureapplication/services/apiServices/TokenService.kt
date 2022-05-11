@@ -1,14 +1,14 @@
-package com.example.student_community.services.apiServices
+package com.example.agricultureapplication.services.apiServices
 
 import android.content.Context
-import com.example.student_community.consts.ApiConsts
-import com.example.student_community.models.api.ApiResponse
-import com.example.student_community.models.user.Introspec
-import com.example.student_community.models.user.JwtToken
-import com.example.student_community.services.retrofitServices.ApiClient
-import com.example.student_community.services.retrofitServices.RetrofitTokenService
-import com.example.student_community.utility.GlobalApp
-import com.example.student_community.utility.HelperService
+import com.example.agricultureapplication.consts.ApiConsts
+import com.example.agricultureapplication.models.api.ApiResponse
+import com.example.agricultureapplication.models.user.Introspec
+import com.example.agricultureapplication.models.user.JwtToken
+import com.example.agricultureapplication.services.retrofitServices.ApiClient
+import com.example.agricultureapplication.services.retrofitServices.RetrofitTokenService
+import com.example.agricultureapplication.utility.GlobalApp
+import com.example.agricultureapplication.utility.HelperService
 import com.google.gson.Gson
 
 class TokenService {

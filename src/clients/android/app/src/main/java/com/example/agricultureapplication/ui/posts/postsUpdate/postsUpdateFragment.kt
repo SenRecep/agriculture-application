@@ -1,4 +1,4 @@
-package com.example.student_community.ui.posts.postsUpdate
+package com.example.agricultureapplication.ui.posts.postsUpdate
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -9,13 +9,11 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
-import com.example.student_community.MainActivity
-import com.example.student_community.R
-import com.example.student_community.models.webapi.dto.AddressCreateDto
-import com.example.student_community.models.webapi.dto.AddressUpdateDto
-import com.example.student_community.models.webapi.dto.PostUpdateDto
-import com.example.student_community.services.LocationService
-import com.example.student_community.utility.GlobalApp
+import com.example.agricultureapplication.MainActivity
+import com.example.agricultureapplication.R
+import com.example.agricultureapplication.models.webapi.dto.AddressUpdateDto
+import com.example.agricultureapplication.models.webapi.dto.PostUpdateDto
+import com.example.agricultureapplication.services.LocationService
 import kotlinx.android.synthetic.main.posts_add_fragment.*
 import kotlinx.android.synthetic.main.posts_update_fragment.view.*
 
@@ -59,7 +57,7 @@ class postsUpdateFragment : Fragment() {
                     Longitude = viewModel.locationData.value!!.longitude,
                     Address = viewModel.locationData.value!!.address
                 )
-            else
+            else{}
                 postUpdateDto.Address = AddressUpdateDto(
                     Latitude = args.post.Address.Latitude,
                     Longitude = args.post.Address.Longitude,

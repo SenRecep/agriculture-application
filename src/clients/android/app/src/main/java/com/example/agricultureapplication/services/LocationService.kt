@@ -1,4 +1,4 @@
-package com.example.student_community.services
+package com.example.agricultureapplication.services
 
 import android.Manifest
 import android.app.Activity
@@ -14,12 +14,10 @@ import android.util.Log
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat.startActivity
-import androidx.lifecycle.MutableLiveData
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.tasks.Task
 import kotlinx.coroutines.*
-import kotlinx.coroutines.tasks.await
 import java.util.*
 import kotlin.coroutines.CoroutineContext
 import kotlin.math.roundToInt

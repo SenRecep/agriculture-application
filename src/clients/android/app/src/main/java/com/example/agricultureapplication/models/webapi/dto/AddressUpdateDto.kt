@@ -1,4 +1,4 @@
-package com.example.student_community.models.webapi.dto
+package com.example.agricultureapplication.models.webapi.dto
 
 import com.google.gson.annotations.SerializedName
 

@@ -1,8 +1,8 @@
-package com.example.student_community.services.retrofitServices
+package com.example.agricultureapplication.services.retrofitServices
 
-import com.example.student_community.models.webapi.Post
-import com.example.student_community.models.webapi.dto.PostCreateDto
-import com.example.student_community.models.webapi.dto.PostUpdateDto
+import com.example.agricultureapplication.models.webapi.Post
+import com.example.agricultureapplication.models.webapi.dto.PostCreateDto
+import com.example.agricultureapplication.models.webapi.dto.PostUpdateDto
 import retrofit2.Response
 import retrofit2.http.*
 

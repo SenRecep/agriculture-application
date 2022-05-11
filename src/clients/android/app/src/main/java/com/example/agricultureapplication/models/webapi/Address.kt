@@ -1,7 +1,7 @@
-package com.example.student_community.models.webapi
+package com.example.agricultureapplication.models.webapi
 
 import android.os.Parcelable
-import com.example.student_community.models.webapi.dto.AddressListDto
+import com.example.agricultureapplication.models.webapi.dto.AddressListDto
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 import java.util.*

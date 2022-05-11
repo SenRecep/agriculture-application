@@ -1,4 +1,4 @@
-package com.example.student_community.ui.posts.postsAdd
+package com.example.agricultureapplication.ui.posts.postsAdd
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -7,20 +7,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.findNavController
-import com.example.student_community.MainActivity
-import com.example.student_community.R
-import com.example.student_community.models.webapi.dto.AddressCreateDto
-import com.example.student_community.models.webapi.dto.AddressUpdateDto
-import com.example.student_community.models.webapi.dto.PostCreateDto
-import com.example.student_community.services.LocationData
-import com.example.student_community.services.LocationService
+import com.example.agricultureapplication.MainActivity
+import com.example.agricultureapplication.R
+import com.example.agricultureapplication.models.webapi.dto.AddressCreateDto
+import com.example.agricultureapplication.models.webapi.dto.PostCreateDto
+import com.example.agricultureapplication.services.LocationService
 import kotlinx.android.synthetic.main.post_item.view.*
 import kotlinx.android.synthetic.main.posts_add_fragment.*
 import kotlinx.android.synthetic.main.posts_add_fragment.view.*
 import kotlinx.android.synthetic.main.posts_update_fragment.view.*
-import kotlinx.coroutines.launch
 
 class postsAddFragment : Fragment() {
     private lateinit var viewModel: PostsAddViewModel

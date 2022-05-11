@@ -1,4 +1,4 @@
-package com.example.student_community.models.user
+package com.example.agricultureapplication.models.user
 
 import com.google.gson.annotations.SerializedName
 

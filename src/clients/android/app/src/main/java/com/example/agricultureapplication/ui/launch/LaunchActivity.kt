@@ -1,4 +1,4 @@
-package com.example.student_community.ui.launch
+package com.example.agricultureapplication.ui.launch
 
 import android.animation.ObjectAnimator
 import android.animation.PropertyValuesHolder
@@ -8,10 +8,10 @@ import android.os.Bundle
 import android.view.View
 import android.view.animation.Animation
 import androidx.lifecycle.ViewModelProvider
-import com.example.student_community.MainActivity
-import com.example.student_community.R
-import com.example.student_community.ui.auth.AuthActivity
-import com.example.student_community.utility.LoadingState
+import com.example.agricultureapplication.MainActivity
+import com.example.agricultureapplication.R
+import com.example.agricultureapplication.ui.auth.AuthActivity
+import com.example.agricultureapplication.utility.LoadingState
 import kotlinx.android.synthetic.main.activity_launch.*
 
 class LaunchActivity : AppCompatActivity() {

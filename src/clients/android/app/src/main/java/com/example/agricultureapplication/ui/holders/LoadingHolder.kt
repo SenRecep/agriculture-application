@@ -1,4 +1,4 @@
-package com.example.student_community.ui.holders
+package com.example.agricultureapplication.ui.holders
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

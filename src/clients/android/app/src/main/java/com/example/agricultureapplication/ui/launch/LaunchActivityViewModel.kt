@@ -1,13 +1,13 @@
-package com.example.student_community.ui.launch
+package com.example.agricultureapplication.ui.launch
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.student_community.models.api.ApiError
-import com.example.student_community.services.apiServices.TokenService
-import com.example.student_community.utility.IViewModelState
-import com.example.student_community.utility.LoadingState
+import com.example.agricultureapplication.models.api.ApiError
+import com.example.agricultureapplication.services.apiServices.TokenService
+import com.example.agricultureapplication.utility.IViewModelState
+import com.example.agricultureapplication.utility.LoadingState
 import kotlinx.coroutines.launch
 
 class LaunchActivityViewModel : ViewModel(), IViewModelState {

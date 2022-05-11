@@ -1,14 +1,14 @@
-package com.example.student_community.services.apiServices
+package com.example.agricultureapplication.services.apiServices
 
-import com.example.student_community.consts.ApiConsts
-import com.example.student_community.models.api.ApiResponse
-import com.example.student_community.models.api.Pager
-import com.example.student_community.models.webapi.Post
-import com.example.student_community.models.webapi.dto.PostCreateDto
-import com.example.student_community.models.webapi.dto.PostUpdateDto
-import com.example.student_community.services.retrofitServices.ApiClient
-import com.example.student_community.services.retrofitServices.RetrofitPostsService
-import com.example.student_community.utility.HelperService
+import com.example.agricultureapplication.consts.ApiConsts
+import com.example.agricultureapplication.models.api.ApiResponse
+import com.example.agricultureapplication.models.api.Pager
+import com.example.agricultureapplication.models.webapi.Post
+import com.example.agricultureapplication.models.webapi.dto.PostCreateDto
+import com.example.agricultureapplication.models.webapi.dto.PostUpdateDto
+import com.example.agricultureapplication.services.retrofitServices.ApiClient
+import com.example.agricultureapplication.services.retrofitServices.RetrofitPostsService
+import com.example.agricultureapplication.utility.HelperService
 
 class PostsService {
     companion object{

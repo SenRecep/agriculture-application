@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/postsListFragmentNav"
-        android:name="com.example.student_community.ui.posts.postsList.postsListFragment"
+        android:name="com.example.agricultureapplication.ui.posts.postsList.postsListFragment"
         android:label="Posts"
         tools:layout="@layout/posts_list_fragment">
         <action
@@ -19,12 +19,12 @@
     </fragment>
     <fragment
         android:id="@+id/postsAddFragmentNav"
-        android:name="com.example.student_community.ui.posts.postsAdd.postsAddFragment"
+        android:name="com.example.agricultureapplication.ui.posts.postsAdd.postsAddFragment"
         android:label="Posts Create"
         tools:layout="@layout/posts_add_fragment" />
     <fragment
         android:id="@+id/postsDetailFragmentNav"
-        android:name="com.example.student_community.ui.posts.postsDetail.postsDetailFragment"
+        android:name="com.example.agricultureapplication.ui.posts.postsDetail.postsDetailFragment"
         android:label="Post Detail"
         tools:layout="@layout/posts_detail_fragment">
         <action
@@ -32,15 +32,15 @@
             app:destination="@id/postsUpdateFragmentNav" />
         <argument
             android:name="post_list_dto"
-            app:argType="com.example.student_community.models.webapi.dto.PostListDto" />
+            app:argType="com.example.agricultureapplication.models.webapi.dto.PostListDto" />
     </fragment>
     <fragment
         android:id="@+id/postsUpdateFragmentNav"
-        android:name="com.example.student_community.ui.posts.postsUpdate.postsUpdateFragment"
+        android:name="com.example.agricultureapplication.ui.posts.postsUpdate.postsUpdateFragment"
         android:label="Post Update"
         tools:layout="@layout/posts_update_fragment" >
         <argument
             android:name="post"
-            app:argType="com.example.student_community.models.webapi.Post" />
+            app:argType="com.example.agricultureapplication.models.webapi.Post" />
     </fragment>
 </navigation>

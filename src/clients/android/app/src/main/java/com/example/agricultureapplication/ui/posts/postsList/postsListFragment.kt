@@ -1,4 +1,4 @@
-package com.example.student_community.ui.posts.postsList
+package com.example.agricultureapplication.ui.posts.postsList
 
 import android.os.Bundle
 import android.text.format.DateUtils
@@ -12,12 +12,12 @@ import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.student_community.MainActivity
-import com.example.student_community.R
-import com.example.student_community.adapters.PostListAdapter
-import com.example.student_community.models.api.Pager
-import com.example.student_community.services.LocationService
-import com.example.student_community.utility.GlobalApp
+import com.example.agricultureapplication.MainActivity
+import com.example.agricultureapplication.R
+import com.example.agricultureapplication.adapters.PostListAdapter
+import com.example.agricultureapplication.models.api.Pager
+import com.example.agricultureapplication.services.LocationService
+import com.example.agricultureapplication.utility.GlobalApp
 import kotlinx.android.synthetic.main.posts_list_fragment.view.*
 import kotlinx.android.synthetic.main.posts_update_fragment.view.*
 

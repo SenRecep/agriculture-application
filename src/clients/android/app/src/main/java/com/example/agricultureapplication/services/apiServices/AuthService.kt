@@ -1,13 +1,13 @@
-package com.example.student_community.services.apiServices
+package com.example.agricultureapplication.services.apiServices
 
-import com.example.student_community.consts.ApiConsts
-import com.example.student_community.models.api.ApiResponse
-import com.example.student_community.models.user.JwtToken
-import com.example.student_community.models.user.UserSignIn
-import com.example.student_community.models.user.UserSignUp
-import com.example.student_community.services.retrofitServices.ApiClient
-import com.example.student_community.services.retrofitServices.RetrofitAuthService
-import com.example.student_community.utility.HelperService
+import com.example.agricultureapplication.consts.ApiConsts
+import com.example.agricultureapplication.models.api.ApiResponse
+import com.example.agricultureapplication.models.user.JwtToken
+import com.example.agricultureapplication.models.user.UserSignIn
+import com.example.agricultureapplication.models.user.UserSignUp
+import com.example.agricultureapplication.services.retrofitServices.ApiClient
+import com.example.agricultureapplication.services.retrofitServices.RetrofitAuthService
+import com.example.agricultureapplication.utility.HelperService
 
 class AuthService {
     companion object {

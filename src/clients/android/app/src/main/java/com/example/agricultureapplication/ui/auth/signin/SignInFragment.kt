@@ -1,4 +1,4 @@
-package com.example.student_community.ui.auth.signin
+package com.example.agricultureapplication.ui.auth.signin
 
 import android.content.Intent
 import androidx.lifecycle.ViewModelProvider
@@ -7,20 +7,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.viewpager2.widget.ViewPager2
-import com.example.student_community.MainActivity
-import com.example.student_community.R
-import com.example.student_community.models.user.UserSignIn
-import com.example.student_community.models.user.UserSignUp
-import com.example.student_community.ui.auth.signup.SignUpViewModel
-import com.example.student_community.utility.HelperService
-import com.example.student_community.utility.LoadingState
+import com.example.agricultureapplication.MainActivity
+import com.example.agricultureapplication.R
+import com.example.agricultureapplication.models.user.UserSignIn
+import com.example.agricultureapplication.utility.HelperService
+import com.example.agricultureapplication.utility.LoadingState
 import kotlinx.android.synthetic.main.sign_in_fragment.view.*
 import kotlinx.android.synthetic.main.sign_up_fragment.view.*
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
 
 class SignInFragment : Fragment() {
 

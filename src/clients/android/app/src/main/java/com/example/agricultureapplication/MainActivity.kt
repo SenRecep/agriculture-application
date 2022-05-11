@@ -1,4 +1,4 @@
-package com.example.student_community
+package com.example.agricultureapplication
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,7 +6,6 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
-import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -16,12 +15,12 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.LifecycleOwner
-import com.example.student_community.databinding.ActivityMainBinding
-import com.example.student_community.ui.auth.AuthActivity
-import com.example.student_community.utility.GlobalApp
-import com.example.student_community.utility.HelperService
-import com.example.student_community.utility.IViewModelState
-import com.example.student_community.utility.LoadingState
+import com.example.agricultureapplication.databinding.ActivityMainBinding
+import com.example.agricultureapplication.ui.auth.AuthActivity
+import com.example.agricultureapplication.utility.GlobalApp
+import com.example.agricultureapplication.utility.HelperService
+import com.example.agricultureapplication.utility.IViewModelState
+import com.example.agricultureapplication.utility.LoadingState
 import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity() {

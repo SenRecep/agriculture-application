@@ -1,9 +1,8 @@
-package com.example.student_community.models.api
+package com.example.agricultureapplication.models.api
 
 import com.google.gson.annotations.SerializedName
 import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.collections.ArrayList
 
 val sdf = SimpleDateFormat("dd/M/yyyy hh:mm:ss")
 data class ApiError(

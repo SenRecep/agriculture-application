@@ -1,4 +1,4 @@
-package com.example.student_community.utility
+package com.example.agricultureapplication.utility
 
 enum class LoadingState {
     Loading,

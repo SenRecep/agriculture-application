@@ -1,11 +1,11 @@
-package com.example.student_community.interceptors
+package com.example.agricultureapplication.interceptors
 
 import android.content.Context
 import android.content.Intent
 import android.util.Log
-import com.example.student_community.models.user.JwtToken
-import com.example.student_community.ui.auth.AuthActivity
-import com.example.student_community.utility.GlobalApp
+import com.example.agricultureapplication.models.user.JwtToken
+import com.example.agricultureapplication.ui.auth.AuthActivity
+import com.example.agricultureapplication.utility.GlobalApp
 import com.google.gson.Gson
 import okhttp3.Interceptor
 import okhttp3.Response

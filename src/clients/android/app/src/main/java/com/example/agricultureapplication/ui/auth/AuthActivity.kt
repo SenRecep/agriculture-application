@@ -1,17 +1,13 @@
-package com.example.student_community.ui.auth
+package com.example.agricultureapplication.ui.auth
 
-import android.animation.ObjectAnimator
-import android.animation.PropertyValuesHolder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.view.animation.Animation
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.student_community.R
-import com.example.student_community.ui.auth.signin.SignInFragment
-import com.example.student_community.ui.auth.signup.SignUpFragment
+import com.example.agricultureapplication.R
+import com.example.agricultureapplication.ui.auth.signin.SignInFragment
+import com.example.agricultureapplication.ui.auth.signup.SignUpFragment
 import kotlinx.android.synthetic.main.activity_auth.*
 import kotlinx.android.synthetic.main.activity_launch.*
 

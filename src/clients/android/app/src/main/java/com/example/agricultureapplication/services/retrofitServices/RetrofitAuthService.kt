@@ -1,8 +1,8 @@
-package com.example.student_community.services.retrofitServices
+package com.example.agricultureapplication.services.retrofitServices
 
-import com.example.student_community.models.user.JwtToken
-import com.example.student_community.models.user.UserSignIn
-import com.example.student_community.models.user.UserSignUp
+import com.example.agricultureapplication.models.user.JwtToken
+import com.example.agricultureapplication.models.user.UserSignIn
+import com.example.agricultureapplication.models.user.UserSignUp
 import okhttp3.ResponseBody
 import retrofit2.Response
 import retrofit2.http.Body

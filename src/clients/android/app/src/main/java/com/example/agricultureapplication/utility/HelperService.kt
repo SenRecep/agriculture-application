@@ -1,12 +1,12 @@
-package com.example.student_community.utility
+package com.example.agricultureapplication.utility
 
 import android.content.Context
 import android.widget.Toast
-import com.example.student_community.R
-import com.example.student_community.exceptions.OfflineException
-import com.example.student_community.models.api.ApiError
-import com.example.student_community.models.api.ApiResponse
-import com.example.student_community.models.user.JwtToken
+import com.example.agricultureapplication.R
+import com.example.agricultureapplication.exceptions.OfflineException
+import com.example.agricultureapplication.models.api.ApiError
+import com.example.agricultureapplication.models.api.ApiResponse
+import com.example.agricultureapplication.models.user.JwtToken
 import com.google.gson.Gson
 import retrofit2.Response
 import java.util.*

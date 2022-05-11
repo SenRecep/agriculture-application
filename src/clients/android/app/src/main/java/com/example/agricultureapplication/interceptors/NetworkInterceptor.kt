@@ -1,7 +1,7 @@
-package com.example.student_community.interceptors
+package com.example.agricultureapplication.interceptors
 
-import com.example.student_community.exceptions.OfflineException
-import com.example.student_community.utility.LiveNetworkListener
+import com.example.agricultureapplication.exceptions.OfflineException
+import com.example.agricultureapplication.utility.LiveNetworkListener
 import okhttp3.Interceptor
 import okhttp3.Response
 

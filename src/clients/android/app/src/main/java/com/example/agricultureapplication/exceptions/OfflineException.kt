@@ -1,4 +1,4 @@
-package com.example.student_community.exceptions
+package com.example.agricultureapplication.exceptions
 
 import java.io.IOException
 

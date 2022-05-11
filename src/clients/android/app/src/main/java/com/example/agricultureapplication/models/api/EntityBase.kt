@@ -1,4 +1,4 @@
-package com.example.student_community.models.api
+package com.example.agricultureapplication.models.api
 
 import com.google.gson.annotations.SerializedName
 import java.util.*

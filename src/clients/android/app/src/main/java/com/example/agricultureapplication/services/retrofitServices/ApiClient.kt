@@ -1,7 +1,7 @@
-package com.example.student_community.services.retrofitServices
+package com.example.agricultureapplication.services.retrofitServices
 
-import com.example.student_community.interceptors.NetworkInterceptor
-import com.example.student_community.interceptors.TokenInterceptor
+import com.example.agricultureapplication.interceptors.NetworkInterceptor
+import com.example.agricultureapplication.interceptors.TokenInterceptor
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

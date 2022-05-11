@@ -1,10 +1,8 @@
-package com.example.student_community.utility
+package com.example.agricultureapplication.utility
 
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import android.os.Build
-import androidx.annotation.RequiresApi
 
 class LiveNetworkListener {
     companion object {

@@ -1,4 +1,4 @@
-package com.example.student_community.ui.posts.postsAdd
+package com.example.agricultureapplication.ui.posts.postsAdd
 
 import android.location.Location
 import android.widget.Toast
@@ -6,14 +6,14 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.student_community.models.api.ApiError
-import com.example.student_community.models.webapi.dto.PostCreateDto
-import com.example.student_community.services.LocationData
-import com.example.student_community.services.LocationService
-import com.example.student_community.services.apiServices.PostsService
-import com.example.student_community.utility.GlobalApp
-import com.example.student_community.utility.IViewModelState
-import com.example.student_community.utility.LoadingState
+import com.example.agricultureapplication.models.api.ApiError
+import com.example.agricultureapplication.models.webapi.dto.PostCreateDto
+import com.example.agricultureapplication.services.LocationData
+import com.example.agricultureapplication.services.LocationService
+import com.example.agricultureapplication.services.apiServices.PostsService
+import com.example.agricultureapplication.utility.GlobalApp
+import com.example.agricultureapplication.utility.IViewModelState
+import com.example.agricultureapplication.utility.LoadingState
 import kotlinx.coroutines.launch
 
 class PostsAddViewModel : ViewModel(), IViewModelState {

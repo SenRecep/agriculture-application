@@ -1,14 +1,14 @@
-package com.example.student_community.ui.auth.signin
+package com.example.agricultureapplication.ui.auth.signin
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.student_community.models.api.ApiError
-import com.example.student_community.models.user.UserSignIn
-import com.example.student_community.services.apiServices.AuthService
-import com.example.student_community.utility.IViewModelState
-import com.example.student_community.utility.LoadingState
+import com.example.agricultureapplication.models.api.ApiError
+import com.example.agricultureapplication.models.user.UserSignIn
+import com.example.agricultureapplication.services.apiServices.AuthService
+import com.example.agricultureapplication.utility.IViewModelState
+import com.example.agricultureapplication.utility.LoadingState
 import kotlinx.coroutines.launch
 
 class SignInViewModel : ViewModel(), IViewModelState {
