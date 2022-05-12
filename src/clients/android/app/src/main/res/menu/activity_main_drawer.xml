@@ -9,6 +9,10 @@
             android:icon="@drawable/ic_baseline_home_24"
             android:title="@string/menu_home" />
         <item
+            android:id="@+id/weatherFragmentNav"
+            android:icon="@drawable/ic_baseline_wb_sunny_24"
+            android:title="Weather" />
+        <item
             android:id="@+id/menu_logout"
             android:icon="@drawable/logout"
             android:title="@string/menu_logout" />

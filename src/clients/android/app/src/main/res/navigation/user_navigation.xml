@@ -43,4 +43,9 @@
             android:name="post"
             app:argType="com.example.agricultureapplication.models.webapi.Post" />
     </fragment>
+    <fragment
+        android:id="@+id/weatherFragmentNav"
+        android:name="com.example.agricultureapplication.ui.weather.WeatherFragment"
+        android:label="Weather"
+        tools:layout="@layout/weather_fragment" />
 </navigation>

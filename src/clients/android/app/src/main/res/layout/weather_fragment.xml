@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e8f4f8"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".ui.weather.WeatherFragment">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="WEATHER FORECAST "
+        android:textSize="40sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/txt_weather_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="Enter City Name"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+
+        <Button
+            android:id="@+id/btn_weather_show"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="#0070c7"
+            android:onClick="getWeatherDetails"
+            android:text="SH0W"
+            android:textColor="@android:color/white"
+            app:backgroundTint="@null"
+            tools:ignore="OnClick" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <TextView
+                android:id="@+id/txt_weather_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </ScrollView>
+
+    </LinearLayout>
+</LinearLayout>

@@ -49,6 +49,8 @@ class postsListFragment : Fragment() {
 
         viewModel.isAdmin()
 
+
+
         fragmentView.btn_post_add.setOnClickListener {
             it.findNavController().navigate(R.id.postsAddFragmentNav)
         }
