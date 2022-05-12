@@ -50,11 +50,8 @@ class PostListAdapter(
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val post = posts[position]
         if (holder is PostHolder) {
-            /*holder.txtTitle.text = post.Title
+            holder.txtName.text = post.Name
             holder.txtContent.text = post.Content
-            holder.txtAddress.text = post.Address.Address
-            holder.textDistance.text = post.Address.DistanceText
-            holder.textDate.text=post.UpdatedTimeText*/
             holder.itemView.setOnClickListener {
                 itemClick(post)
             }

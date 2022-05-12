@@ -28,17 +28,17 @@ class postsAddFragment : Fragment() {
 
         fragmentView.btn_fragment_post_add.setOnClickListener() {
             var postCreateDto = PostCreateDto(
-                Name = fragmentView.txt_post_add_title.editText?.text.toString(),
+                Name = fragmentView.txt_post_add_name.editText?.text.toString(),
                 Content = fragmentView.txt_post_add_content.editText?.text.toString(),
-                Fertilizer = fragmentView.txt_post_add_content.editText?.text.toString(),
-                Irrigation = fragmentView.txt_post_add_content.editText?.text.toString(),
-                Planting = fragmentView.txt_post_add_content.editText?.text.toString(),
-                Harvest = fragmentView.txt_post_add_content.editText?.text.toString(),
+                Fertilizer = fragmentView.text_post_add_fertilizer.editText?.text.toString(),
+                Irrigation = fragmentView.txt_post_add_irrigation.editText?.text.toString(),
+                Planting = fragmentView.txt_post_add_planting.editText?.text.toString(),
+                Harvest = fragmentView.txt_post_add_harvest.editText?.text.toString(),
             )
 
             viewModel.createPost(postCreateDto).observe(viewLifecycleOwner) {
                 if (it) {
-                    Toast.makeText(activity, "Post created", Toast.LENGTH_LONG).show()
+                    Toast.makeText(activity, "Plant created", Toast.LENGTH_LONG).show()
                     fragmentView.findNavController().navigate(R.id.postsListFragmentNav)
                 }
             }

@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.agricultureapplication.MainActivity
@@ -18,6 +19,7 @@ import com.example.agricultureapplication.adapters.PostListAdapter
 import com.example.agricultureapplication.models.api.Pager
 import com.example.agricultureapplication.services.LocationService
 import com.example.agricultureapplication.utility.GlobalApp
+import kotlinx.android.synthetic.main.posts_detail_fragment.*
 import kotlinx.android.synthetic.main.posts_list_fragment.view.*
 import kotlinx.android.synthetic.main.posts_update_fragment.view.*
 
@@ -45,6 +47,8 @@ class postsListFragment : Fragment() {
         MainActivity.setLoadingStatus(viewModel, viewLifecycleOwner)
         MainActivity.setErrorStatus(viewModel, viewLifecycleOwner)
 
+        viewModel.isAdmin()
+
         fragmentView.btn_post_add.setOnClickListener {
             it.findNavController().navigate(R.id.postsAddFragmentNav)
         }
@@ -54,6 +58,11 @@ class postsListFragment : Fragment() {
         fragmentView.rv.layoutManager = linearLayoutManager
 
 
+        viewModel.isOwner.observe(viewLifecycleOwner) {
+            if (it) {
+                fragmentView.btn_post_add.visibility = View.VISIBLE
+            }
+        }
 
         viewModel.posts.observe(viewLifecycleOwner) { it ->
             if (it.size == 0 && page != 0) {

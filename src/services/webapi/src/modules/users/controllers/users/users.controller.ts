@@ -8,14 +8,17 @@ import {
   Param,
   ParseIntPipe,
   Post,
+  Req,
   UseFilters,
   UseInterceptors,
   UsePipes,
   ValidationPipe,
 } from '@nestjs/common';
+import { Request as ExpressRequest } from 'express';
 import { HttpExceptionFilter } from 'src/filters/HttpException.filter';
 import { Public } from 'src/modules/auth/guards/Public.guard';
 import { CreateUserDto } from '../../dto/CreateUser.dto';
+import { UserListDto } from '../../dto/UserList.dto';
 import { UsersService } from '../../services/users/users.service';
 
 @Controller('users')
@@ -37,6 +40,11 @@ export class UsersController {
     const user = await this.userService.findById(id);
     if (!user) throw new NotFoundException();
     return user;
+  }
+
+  @Get('isAdmin')
+  isAdmin(@Req() req: ExpressRequest) {
+    return new UserListDto(req.user).isAdmin;
   }
 
   @UseInterceptors(ClassSerializerInterceptor)

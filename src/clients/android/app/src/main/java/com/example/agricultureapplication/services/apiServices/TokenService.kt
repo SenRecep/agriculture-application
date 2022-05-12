@@ -31,5 +31,16 @@ class TokenService {
                 return HelperService.handleException(ex);
             }
         }
+
+        suspend fun checkIsAdmin():ApiResponse<Boolean>{
+            try {
+                var response = TokenService.retrofitService.isAdmin();
+                if (!response.isSuccessful) return HelperService.handleApiError(response);
+                var isOwner = response.body()!!;
+                return ApiResponse(true, isOwner);
+            } catch (ex: Exception) {
+                return HelperService.handleException(ex);
+            }
+        }
     }
 }

@@ -11,6 +11,7 @@ import com.example.agricultureapplication.models.webapi.Post
 import com.example.agricultureapplication.services.LocationData
 import com.example.agricultureapplication.services.LocationService
 import com.example.agricultureapplication.services.apiServices.PostsService
+import com.example.agricultureapplication.services.apiServices.TokenService
 import com.example.agricultureapplication.utility.GlobalApp
 import com.example.agricultureapplication.utility.IViewModelState
 import com.example.agricultureapplication.utility.LoadingState
@@ -20,6 +21,16 @@ class PostsListViewModel : ViewModel(), IViewModelState {
     override var loadingState: MutableLiveData<LoadingState> = MutableLiveData()
     override var errorState: MutableLiveData<ApiError?> = MutableLiveData()
     var posts: MutableLiveData<ArrayList<Post>> = MutableLiveData()
+    var isOwner: MutableLiveData<Boolean> = MutableLiveData()
+
+    fun isAdmin() {
+        viewModelScope.launch {
+            var response = TokenService.checkIsAdmin()
+            if (response.isSuccessful)
+                isOwner.value = response.data!!
+        }
+    }
+
 
     fun getPosts(pager: Pager) {
         loadingState.value = LoadingState.Loading

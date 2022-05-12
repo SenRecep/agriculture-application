@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:layout_margin="10dp"
     app:cardBackgroundColor="#F8F2F2"
     app:cardCornerRadius="10dp">
@@ -19,7 +19,7 @@
         tools:layout_editor_absoluteY="36dp">
 
         <TextView
-            android:id="@+id/txt_title"
+            android:id="@+id/txt_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -46,10 +46,11 @@
             android:layout_width="207dp"
             android:layout_height="93dp"
             android:layout_marginEnd="33dp"
-            android:text="TextView"
+            android:maxLength="130"
+            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type"
             app:layout_constraintBottom_toBottomOf="@+id/image"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/txt_title" />
+            app:layout_constraintStart_toStartOf="@+id/txt_name" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

@@ -30,7 +30,7 @@ class postsDetailFragment : Fragment() {
         MainActivity.setLoadingStatus(viewModel, viewLifecycleOwner)
         MainActivity.setErrorStatus(viewModel, viewLifecycleOwner)
 
-        viewModel.checkOwner(args.post.Id.toInt())
+        viewModel.isAdmin()
 
         viewModel.isOwner.observe(viewLifecycleOwner) {
             if (it) {
@@ -38,12 +38,13 @@ class postsDetailFragment : Fragment() {
                 btn_detail_update.visibility = View.VISIBLE
             }
         }
-        viewModel.post.observe(viewLifecycleOwner) {
-            if (it == null) return@observe
-           /* txt_detail_Title.text = it.Title
-            txt_detail_address.text = it.Address.Address
-            txt_detail_content.text = it.Content*/
-        }
+
+        fragmentView.txt_detail_name.text = args.post.Name
+        fragmentView.txt_detail_content.text = args.post.Content
+        fragmentView.txt_detail_fertilizer.text = args.post.Fertilizer
+        fragmentView.txt_detail_harvest.text = args.post.Harvest
+        fragmentView.txt_detail_irrigation.text = args.post.Irrigation
+        fragmentView.txt_detail_planting.text = args.post.Planting
 
         fragmentView.btn_detail_delete.setOnClickListener() {
             viewModel.deletePost(args.post.Id.toInt()).observe(viewLifecycleOwner) {
@@ -55,10 +56,9 @@ class postsDetailFragment : Fragment() {
         }
 
         fragmentView.btn_detail_update.setOnClickListener() {
-            if (viewModel.post == null) return@setOnClickListener
             var action =
                 postsDetailFragmentDirections.actionPostsDetailFragmentToPostsUpdateFragment(
-                    viewModel.post.value!!
+                    args.post
                 )
             fragmentView.findNavController().navigate(action)
         }

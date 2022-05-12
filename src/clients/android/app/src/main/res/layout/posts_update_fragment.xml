@@ -29,16 +29,16 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
-                android:text="Update Post"
+                android:text="Update Plant"
                 android:textSize="30dp" />
 
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/txt_post_update_title"
+                android:id="@+id/txt_post_update_name"
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="Title">
+                android:hint="Name">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
@@ -80,15 +80,15 @@
                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="10"
-                android:layout_marginBottom="10"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:hint="Irrigation">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10"
-                    android:layout_marginBottom="10" />
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -101,8 +101,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10"
-                    android:layout_marginBottom="10" />
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -115,15 +115,15 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10"
-                    android:layout_marginBottom="10" />
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/btn_fragment_post_update"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Update Post" />
+                android:text="Update Plant" />
 
 
         </LinearLayout>

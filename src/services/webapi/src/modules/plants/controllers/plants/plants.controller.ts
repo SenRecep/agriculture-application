@@ -17,7 +17,6 @@ import {
 } from '@nestjs/common';
 import { Request } from 'express';
 import { HttpExceptionFilter } from 'src/filters/HttpException.filter';
-import { UserListDto } from 'src/modules/users/dto/UserList.dto';
 import { PlantCreateDto } from '../../dto/PlantCreate.dto';
 import { PlantUpdateDto } from '../../dto/PlantUpdate.dto';
 import { PlantsService } from '../../services/plants/plants.service';
@@ -35,15 +34,6 @@ export class PlantsController {
   @Get('pager')
   async getAllPager(@Query() { take, skip }) {
     return await this.plantsService.getAllPager(take, skip);
-  }
-  @Get('/checkowner/:plantId')
-  async checkOwner(
-    @Param('plantId', ParseIntPipe) plantId: number,
-    @Req() req: Request,
-  ) {
-    const found = await this.plantsService.getByIdAsync(plantId);
-    const user = new UserListDto(req.user);
-    return found?.userId === user.id;
   }
 
   @Get(':id')

@@ -2,9 +2,7 @@ package com.example.agricultureapplication.services.retrofitServices
 
 import com.example.agricultureapplication.models.user.Introspec
 import retrofit2.Response
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface RetrofitTokenService {
     @FormUrlEncoded
@@ -12,4 +10,7 @@ interface RetrofitTokenService {
     suspend fun checkToken(
         @Field("access_token") token: String
     ): Response<Introspec>
+
+    @GET("api/users/isAdmin")
+    suspend fun isAdmin(): Response<Boolean>
 }

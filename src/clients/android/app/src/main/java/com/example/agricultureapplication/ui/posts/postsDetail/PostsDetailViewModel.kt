@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.agricultureapplication.models.api.ApiError
 import com.example.agricultureapplication.models.webapi.Post
 import com.example.agricultureapplication.services.apiServices.PostsService
+import com.example.agricultureapplication.services.apiServices.TokenService
 import com.example.agricultureapplication.utility.IViewModelState
 import com.example.agricultureapplication.utility.LoadingState
 import kotlinx.coroutines.launch
@@ -14,12 +15,11 @@ import kotlinx.coroutines.launch
 class PostsDetailViewModel : ViewModel(), IViewModelState {
     override var loadingState: MutableLiveData<LoadingState> = MutableLiveData()
     override var errorState: MutableLiveData<ApiError?> = MutableLiveData()
-    var post: MutableLiveData<Post> = MutableLiveData()
     var isOwner: MutableLiveData<Boolean> = MutableLiveData()
 
-    fun checkOwner(postId: Int) {
+    fun isAdmin() {
         viewModelScope.launch {
-            var response = PostsService.getCheckOwner(postId)
+            var response = TokenService.checkIsAdmin()
             if (response.isSuccessful)
                 isOwner.value = response.data!!
         }
