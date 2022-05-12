@@ -63,42 +63,61 @@
                     android:minLines="5" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:id="@+id/textView5"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/text_post_update_fertilizer"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Current Location"
-                android:textStyle="bold" />
+                android:layout_height="match_parent"
+                android:hint="Fertilizer">
 
-            <TextView
-                android:id="@+id/txt_post_update_current_address"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:text="[Address]"
-                android:visibility="visible" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txt_post_update_irrigation"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Location"
-                android:textStyle="bold" />
+                android:layout_height="match_parent"
+                android:layout_marginTop="10"
+                android:layout_marginBottom="10"
+                android:hint="Irrigation">
 
-            <TextView
-                android:id="@+id/txt_post_update_address"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="5dp"
-                android:text="[Address]"
-                android:visibility="visible" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10"
+                    android:layout_marginBottom="10" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <CheckBox
-                android:id="@+id/cb_getnewlocation"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txt_post_update_planting"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Get new location"
-                android:textSize="12sp"
-                app:useMaterialThemeColors="true" />
+                android:layout_height="match_parent"
+                android:hint="Planting">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10"
+                    android:layout_marginBottom="10" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txt_post_update_harvest"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Harvest">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10"
+                    android:layout_marginBottom="10" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/btn_fragment_post_update"
