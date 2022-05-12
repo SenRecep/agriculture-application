@@ -17,18 +17,6 @@ class PostsDetailViewModel : ViewModel(), IViewModelState {
     var post: MutableLiveData<Post> = MutableLiveData()
     var isOwner: MutableLiveData<Boolean> = MutableLiveData()
 
-    fun getPost(post_id: Int) {
-        loadingState.value = LoadingState.Loading
-        viewModelScope.launch {
-            var response = PostsService.getPostById(post_id)
-            if (response.isSuccessful)
-                post.value = response.data!!
-            else
-                errorState.value = response.error
-            loadingState.value = LoadingState.Loaded
-        }
-    }
-
     fun checkOwner(postId: Int) {
         viewModelScope.launch {
             var response = PostsService.getCheckOwner(postId)

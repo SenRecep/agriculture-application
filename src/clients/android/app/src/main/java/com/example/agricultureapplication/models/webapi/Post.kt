@@ -1,7 +1,6 @@
 package com.example.agricultureapplication.models.webapi
 
 import android.os.Parcelable
-import com.example.agricultureapplication.models.webapi.dto.PostListDto
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 import java.util.*
@@ -12,10 +11,13 @@ data class Post(
     @SerializedName("createdTime") val CreatedTime: Date,
     @SerializedName("updatedTime") val UpdatedTime: Date,
     @SerializedName("isDeleted") val IsDeleted: Boolean,
-    @SerializedName("title") val Title: String,
+    @SerializedName("name") val Name: String,
     @SerializedName("content") val Content: String,
     @SerializedName("userId") val UserId: Number,
-    @SerializedName("address") val Address: Address,
+    @SerializedName("fertilizer") val Fertilizer: String,
+    @SerializedName("irrigation") val Irrigation: String,
+    @SerializedName("planting") val Planting: String,
+    @SerializedName("harvest") val Harvest: String,
 ) : Parcelable {
     companion object {
         fun createEmptyPost(): Post {
@@ -25,22 +27,14 @@ data class Post(
                 UpdatedTime = Date(),
                 IsDeleted = false,
                 UserId = 0,
-                Title = "",
                 Content = "",
-                Address = Address.createEmptyAddress()
+                Name = "",
+                Fertilizer = "",
+                Irrigation = "",
+                Planting = "",
+                Harvest = "",
             )
         }
-    }
-
-    fun parseToListDto(distanceText: String = "0m", distance: Float = 0f,dateText:String="to day"): PostListDto {
-        return PostListDto(
-            Id = Id,
-            Title = Title,
-            Content = Content,
-            UpdatedTime = UpdatedTime,
-            Address = Address.parseToListDto(distanceText, distance),
-            UpdatedTimeText = dateText
-        )
     }
 }
 

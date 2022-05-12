@@ -3,7 +3,10 @@ package com.example.agricultureapplication.models.webapi.dto
 import com.google.gson.annotations.SerializedName
 
 data class PostUpdateDto(
-    @SerializedName("title") val Title: String?=null,
-    @SerializedName("content") val Content: String?=null,
-    @SerializedName("address") var Address: AddressUpdateDto?=null,
+    @SerializedName("name") val Name: String?,
+    @SerializedName("content") val Content: String?,
+    @SerializedName("fertilizer") val Fertilizer: String?,
+    @SerializedName("irrigation") val Irrigation: String?,
+    @SerializedName("planting") val Planting: String?,
+    @SerializedName("harvest") val Harvest: String?,
 )

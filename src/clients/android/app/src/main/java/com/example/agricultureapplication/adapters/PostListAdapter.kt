@@ -5,13 +5,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.agricultureapplication.R
 import com.example.agricultureapplication.models.webapi.Post
-import com.example.agricultureapplication.models.webapi.dto.PostListDto
 import com.example.agricultureapplication.ui.holders.LoadingHolder
 import com.example.agricultureapplication.ui.holders.PostHolder
 
 class PostListAdapter(
-    var posts: ArrayList<PostListDto>,
-    private val itemClick: (PostListDto) -> Unit
+    var posts: ArrayList<Post>,
+    private val itemClick: (Post) -> Unit
 ) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     private val VIEW_TYPE_LOADING = 0
@@ -51,11 +50,11 @@ class PostListAdapter(
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
         val post = posts[position]
         if (holder is PostHolder) {
-            holder.txtTitle.text = post.Title
+            /*holder.txtTitle.text = post.Title
             holder.txtContent.text = post.Content
             holder.txtAddress.text = post.Address.Address
             holder.textDistance.text = post.Address.DistanceText
-            holder.textDate.text=post.UpdatedTimeText
+            holder.textDate.text=post.UpdatedTimeText*/
             holder.itemView.setOnClickListener {
                 itemClick(post)
             }
@@ -68,7 +67,7 @@ class PostListAdapter(
 
 
     fun addLoading() {
-        var loadingPost = Post.createEmptyPost().parseToListDto()
+        var loadingPost = Post.createEmptyPost()
         posts.add(loadingPost)
         notifyDataSetChanged()
 
@@ -82,7 +81,7 @@ class PostListAdapter(
     }
 
 
-    fun addPosts(newProducts: ArrayList<PostListDto>) {
+    fun addPosts(newProducts: ArrayList<Post>) {
         posts.addAll(newProducts)
         notifyDataSetChanged()
     }

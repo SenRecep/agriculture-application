@@ -44,14 +44,10 @@ class postsListFragment : Fragment() {
 
         MainActivity.setLoadingStatus(viewModel, viewLifecycleOwner)
         MainActivity.setErrorStatus(viewModel, viewLifecycleOwner)
-        viewModel.locationService = LocationService(requireActivity())
-        viewModel.findLocation()
-
 
         fragmentView.btn_post_add.setOnClickListener {
             it.findNavController().navigate(R.id.postsAddFragmentNav)
         }
-
 
         linearLayoutManager = LinearLayoutManager(GlobalApp.getAppContext())
 
@@ -60,28 +56,6 @@ class postsListFragment : Fragment() {
 
 
         viewModel.posts.observe(viewLifecycleOwner) { it ->
-            val now = System.currentTimeMillis()
-            val posts = ArrayList(it.map { post ->
-                var latitude = post.Address.Latitude
-                var longitude = post.Address.Longitude
-                if (viewModel.locationData.value != null) {
-                    latitude = viewModel.locationData.value!!.latitude
-                    longitude = viewModel.locationData.value!!.longitude
-                }
-                val distance = viewModel.locationService.distance(
-                    post.Address.Latitude.toDouble(),
-                    post.Address.Longitude.toDouble(),
-                    latitude.toDouble(),
-                    longitude.toDouble()
-                )
-                val distanceText = viewModel.locationService.distanceText(distance)
-                val dateText = DateUtils.getRelativeTimeSpanString(
-                    post.UpdatedTime.time,
-                    now,
-                    DateUtils.DAY_IN_MILLIS
-                ).toString()
-                post.parseToListDto(distanceText, distance, dateText)
-            })
             if (it.size == 0 && page != 0) {
                 postListRecyclerAdapter?.removeLoading()
                 isLoading = false
@@ -89,7 +63,7 @@ class postsListFragment : Fragment() {
             } else {
                 if (page == 0) {
                     fragmentView.rv.apply {
-                        postListRecyclerAdapter = PostListAdapter(posts) { post ->
+                        postListRecyclerAdapter = PostListAdapter(it) { post ->
                             var action =
                                 postsListFragmentDirections.actionPostsListFragmentToPostsDetailFragment(
                                     post
@@ -110,8 +84,8 @@ class postsListFragment : Fragment() {
                 if (page != 0) {
                     postListRecyclerAdapter?.removeLoading()
                     isLoading = false
-                    var isExist = postListRecyclerAdapter!!.posts.contains(posts[0])
-                    if (!isExist) postListRecyclerAdapter!!.addPosts(posts)
+                    var isExist = postListRecyclerAdapter!!.posts.contains(it[0])
+                    if (!isExist) postListRecyclerAdapter!!.addPosts(it)
                 }
             }
         }
@@ -152,14 +126,5 @@ class postsListFragment : Fragment() {
         }
 
         super.onResume()
-    }
-
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        viewModel.requestPermissionsResult(requestCode, grantResults)
     }
 }

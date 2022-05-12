@@ -10,7 +10,6 @@ import android.widget.Toast
 import androidx.navigation.findNavController
 import com.example.agricultureapplication.MainActivity
 import com.example.agricultureapplication.R
-import com.example.agricultureapplication.models.webapi.dto.AddressCreateDto
 import com.example.agricultureapplication.models.webapi.dto.PostCreateDto
 import com.example.agricultureapplication.services.LocationService
 import kotlinx.android.synthetic.main.post_item.view.*
@@ -20,7 +19,6 @@ import kotlinx.android.synthetic.main.posts_update_fragment.view.*
 
 class postsAddFragment : Fragment() {
     private lateinit var viewModel: PostsAddViewModel
-    private lateinit var locationService: LocationService
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,23 +28,16 @@ class postsAddFragment : Fragment() {
         var fragmentView = inflater.inflate(R.layout.posts_add_fragment, container, false)
         MainActivity.setLoadingStatus(viewModel, viewLifecycleOwner)
         MainActivity.setErrorStatus(viewModel, viewLifecycleOwner)
-        viewModel.locationService = LocationService(requireActivity())
 
-        viewModel.locationData.observe(viewLifecycleOwner) {
-            if (it != null)
-                txt_post_add_address.text = "${it.address}\n[${it.longitude}, ${it.latitude}]"
-        }
-        viewModel.findLocation()
 
         fragmentView.btn_fragment_post_add.setOnClickListener() {
             var postCreateDto = PostCreateDto(
-                Title = fragmentView.txt_post_add_title.editText?.text.toString(),
+                Name = fragmentView.txt_post_add_title.editText?.text.toString(),
                 Content = fragmentView.txt_post_add_content.editText?.text.toString(),
-                Address = AddressCreateDto(
-                    Latitude = viewModel.locationData.value!!.latitude,
-                    Longitude = viewModel.locationData.value!!.longitude,
-                    Address = viewModel.locationData.value!!.address
-                ),
+                Fertilizer = fragmentView.txt_post_add_content.editText?.text.toString(),
+                Irrigation = fragmentView.txt_post_add_content.editText?.text.toString(),
+                Planting = fragmentView.txt_post_add_content.editText?.text.toString(),
+                Harvest = fragmentView.txt_post_add_content.editText?.text.toString(),
             )
 
             viewModel.createPost(postCreateDto).observe(viewLifecycleOwner) {
@@ -58,14 +49,5 @@ class postsAddFragment : Fragment() {
         }
 
         return fragmentView
-    }
-
-    override fun onRequestPermissionsResult(
-        requestCode: Int,
-        permissions: Array<out String>,
-        grantResults: IntArray
-    ) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-        viewModel.requestPermissionsResult(requestCode, grantResults)
     }
 }

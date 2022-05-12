@@ -8,5 +8,6 @@ data class UserList(
     @SerializedName("firstName") var FirstName: String,
     @SerializedName("lastName") var LastName: String,
     @SerializedName("email") var Email: String,
-    @SerializedName("password") var Password: String
+    @SerializedName("password") var Password: String,
+    @SerializedName("isAdmin") var IsAdmin: Boolean
 )
