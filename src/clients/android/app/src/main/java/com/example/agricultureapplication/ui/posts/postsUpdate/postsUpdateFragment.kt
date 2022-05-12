@@ -31,6 +31,10 @@ class postsUpdateFragment : Fragment() {
 
         fragmentView.txt_post_update_name.editText?.setText(args.post.Name)
         fragmentView.txt_post_update_content.editText?.setText(args.post.Content)
+        fragmentView.text_post_update_fertilizer.editText?.setText(args.post.Fertilizer)
+        fragmentView.txt_post_update_harvest.editText?.setText(args.post.Harvest)
+        fragmentView.txt_post_update_irrigation.editText?.setText(args.post.Irrigation)
+        fragmentView.txt_post_update_planting.editText?.setText(args.post.Planting)
 
         fragmentView.btn_fragment_post_update.setOnClickListener() {
             var postUpdateDto = PostUpdateDto(
