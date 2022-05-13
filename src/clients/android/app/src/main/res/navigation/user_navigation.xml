@@ -51,6 +51,6 @@
     <fragment
         android:id="@+id/cropProposalFragmentNav"
         android:name="com.example.agricultureapplication.ui.cropProposal.CropProposalFragment"
-        android:label="crop_proposal_fragment"
+        android:label="Crop Proposal"
         tools:layout="@layout/crop_proposal_fragment" />
 </navigation>
