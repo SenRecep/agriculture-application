@@ -4,15 +4,15 @@ import { User } from './User.entity';
 
 @Entity({ name: 'plants' })
 export class Plant extends EntityBase {
-  @Column({ name: 'name', nullable: false, default: '' })
+  @Column({ name: 'name', nullable: false, type: 'longtext' })
   name: string;
-  @Column({ name: 'fertilizer', nullable: false, default: '' })
+  @Column({ name: 'fertilizer', nullable: false, type: 'longtext' })
   fertilizer: string;
-  @Column({ name: 'irrigation', nullable: false, default: '' })
+  @Column({ name: 'irrigation', nullable: false, type: 'longtext' })
   irrigation: string;
-  @Column({ name: 'planting', nullable: false, default: '' })
+  @Column({ name: 'planting', nullable: false, type: 'longtext' })
   planting: string;
-  @Column({ name: 'harvest', nullable: false, default: '' })
+  @Column({ name: 'harvest', nullable: false, type: 'longtext' })
   harvest: string;
   @Column({ name: 'content', nullable: false, type: 'longtext' })
   content: string;
