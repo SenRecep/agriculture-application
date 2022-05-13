@@ -48,4 +48,9 @@
         android:name="com.example.agricultureapplication.ui.weather.WeatherFragment"
         android:label="Weather"
         tools:layout="@layout/weather_fragment" />
+    <fragment
+        android:id="@+id/cropProposalFragmentNav"
+        android:name="com.example.agricultureapplication.ui.cropProposal.CropProposalFragment"
+        android:label="crop_proposal_fragment"
+        tools:layout="@layout/crop_proposal_fragment" />
 </navigation>

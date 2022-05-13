@@ -14,7 +14,7 @@ export class Plant extends EntityBase {
   planting: string;
   @Column({ name: 'harvest', nullable: false, default: '' })
   harvest: string;
-  @Column({ name: 'content', nullable: false, default: '', type: 'longtext' })
+  @Column({ name: 'content', nullable: false, default: '', type: 'text' })
   content: string;
   @ManyToOne(() => User)
   @JoinColumn()
