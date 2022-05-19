@@ -30,12 +30,19 @@ class postsDetailFragment : Fragment() {
         MainActivity.setLoadingStatus(viewModel, viewLifecycleOwner)
         MainActivity.setErrorStatus(viewModel, viewLifecycleOwner)
 
+        fragmentView.btn_detail_delete.visibility = View.GONE
+        fragmentView.btn_detail_update.visibility = View.GONE
+
         viewModel.isAdmin()
 
         viewModel.isOwner.observe(viewLifecycleOwner) {
             if (it) {
-                btn_detail_delete.visibility = View.VISIBLE
-                btn_detail_update.visibility = View.VISIBLE
+                fragmentView.btn_detail_delete.visibility = View.VISIBLE
+                fragmentView.btn_detail_update.visibility = View.VISIBLE
+            }
+            else{
+                fragmentView.btn_detail_delete.visibility = View.GONE
+                fragmentView.btn_detail_update.visibility = View.GONE
             }
         }
 
