@@ -68,8 +68,8 @@ class SignUpFragment : Fragment() {
 
     private fun onAlertDialog(view: View) {
         var builder = AlertDialog.Builder(view.context)
-        builder.setMessage("Kullanıcı kayıt işlemi tamamlandı, giriş yapabilirsiniz!")
-        builder.setPositiveButton("Tamam") { _, _ -> }
+        builder.setMessage("User Registered!")
+        builder.setPositiveButton("Ok") { _, _ -> }
         builder.show()
     }
 }
